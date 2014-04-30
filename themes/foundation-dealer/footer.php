@@ -5,7 +5,7 @@
 	<?php do_action('foundationPress_before_footer'); ?>
 	<?php dynamic_sidebar("footer-widgets"); ?>
 	<?php do_action('foundationPress_after_footer'); ?>
-	<p>&copy; Copyright <?php echo home_url(); ?>"><?php bloginfo('name'); ?>. <a href="http://ww.dealerfire.com/" target="_blank">Automotive Marketing by DEALERFIRE</a>.</p>
+	<p>&copy; Copyright <?php bloginfo('name'); ?>. <a href="http://ww.dealerfire.com/" target="_blank">Automotive Marketing by DEALERFIRE</a>.</p>
 </footer>
 <a class="exit-off-canvas"></a>
 	
