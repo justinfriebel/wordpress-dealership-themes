@@ -56,7 +56,9 @@
   
         <div class="top-bar-container contain-to-grid show-for-medium-up">
             <nav class="top-bar" data-topbar="">
-                <img id="logo" src="<?php bloginfo('template_directory'); ?>/images/dealership-logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+									<img id="logo" src="<?php bloginfo('template_directory'); ?>/images/dealership-logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+								</a>
                 <section class="top-bar-section">
                     <?php foundationPress_top_bar_l(); ?>
                     <?php foundationPress_top_bar_r(); ?>
