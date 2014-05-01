@@ -8,7 +8,7 @@
  *	3.2 - Posts
  *	3.3	- Widgets
  *	3.4 - Comments
-  *	3.5 - Lists
+ *	3.5 - Lists
   * 3.6 - Forms
  * 4.0 - Plugins
 
@@ -90,7 +90,9 @@
  */
 
 // Insert styles here
-
+.home article.category-featured {
+	margin: 5rem 0;
+}
 
 /**
  * 3.6 Forms
