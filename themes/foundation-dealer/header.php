@@ -45,7 +45,9 @@
     </section>
     <section class="middle tab-bar-section">
       
-      <h1 class="title"><?php bloginfo( 'name' ); ?> small logo</h1>
+			<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+				<img id="logo" src="<?php bloginfo('template_directory'); ?>/images/dealership-logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+			</a>
 
     </section>
   </nav>

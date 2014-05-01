@@ -58,7 +58,7 @@
  */
 
 .home-heading {
-	padding: 3rem 0;
+	padding: 3rem 0.9375rem;
 }
 
 
@@ -109,9 +109,22 @@
  * ----------------------------------------------------------------------------
  */
 
-// Insert styles here
+// Responsive media queries
 
-@media only screen and (min-width: 40.063em) {
+@media #{$small-up} { }
+@media #{$small-only} {
+	#logo {
+		max-height: 2.6rem;
+		padding: 0;
+		margin: 0 auto;
+		float: none;
+	}
+}
+
+@media #{$medium-up} {
+	.contain-to-grid .top-bar {
+		padding: 0 0.9375rem;
+	}
 	.top-bar-section li:not(.has-form) a:not(.button) {
 		line-height: 112px;
 	}
@@ -119,3 +132,13 @@
 		height: 112px;
 	}
 }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }

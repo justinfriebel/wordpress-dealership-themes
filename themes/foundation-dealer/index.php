@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<h1 class="home-heading"><?php bloginfo('name'); ?></h1>
+	<h1 class="home-heading small-12 columns"><?php bloginfo('name'); ?></h1>
 
 	<div class="small-12 large-8 columns" role="main">
 		<div class="featured-posts-container">
