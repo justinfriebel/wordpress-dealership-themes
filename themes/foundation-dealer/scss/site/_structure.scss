@@ -30,7 +30,14 @@
 
 // Insert styles here
 .top-bar-container {
-	padding: 1rem;
+	padding: 0;
+}
+.top-bar {
+	height: auto;
+}
+#logo {
+	float: left;
+	padding: 1rem 0;
 }
 #footer {
 	padding: 2rem;
@@ -99,3 +106,12 @@
  */
 
 // Insert styles here
+
+@media only screen and (min-width: 40.063em) {
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		line-height: 112px;
+	}
+	.top-bar-section>ul>.divider, .top-bar-section>ul>[role="separator"] {
+		height: 112px;
+	}
+}

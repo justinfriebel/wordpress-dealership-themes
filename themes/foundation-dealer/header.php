@@ -45,7 +45,7 @@
     </section>
     <section class="middle tab-bar-section">
       
-      <h1 class="title"><?php bloginfo( 'name' ); ?> test</h1>
+      <h1 class="title"><?php bloginfo( 'name' ); ?> small logo</h1>
 
     </section>
   </nav>
@@ -56,7 +56,7 @@
   
         <div class="top-bar-container contain-to-grid show-for-medium-up">
             <nav class="top-bar" data-topbar="">
-                <img src="/images/dealership-logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                <img id="logo" src="<?php bloginfo('template_directory'); ?>/images/dealership-logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
                 <section class="top-bar-section">
                     <?php foundationPress_top_bar_l(); ?>
                     <?php foundationPress_top_bar_r(); ?>
