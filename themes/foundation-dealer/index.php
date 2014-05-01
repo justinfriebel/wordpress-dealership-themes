@@ -2,15 +2,20 @@
 
 	<div class="small-12 large-8 columns" role="main">
 		
-		<?php
-		
-			$featured_posts_query = new WP_Query('category_name=featured&posts_per_page=1');
-
-			while ($featured_posts_query->have_posts()) : $featured_posts_query->the_post();
-				get_template_part( 'content', get_post_format() );
-			endwhile;
+		<div class="featured-posts-container">
+			<?php
 			
-		?>
+				$featured_posts_query = new WP_Query('category_name=featured&posts_per_page=1');
+
+				while ($featured_posts_query->have_posts()) : $featured_posts_query->the_post();
+					echo '<a href="' . get_permalink($post->ID) . '" >';
+					the_post_thumbnail( $large );
+					echo '</a>';
+					get_template_part( 'content', get_post_format() );
+				endwhile;
+				
+			?>
+		</div>
 	
 	<?php if ( have_posts() ) : ?>
 		
