@@ -71,3 +71,4 @@
 <section class="container" role="document">
   <?php do_action('foundationPress_after_header'); ?>
   <div class="row">
+	<div class="column">
