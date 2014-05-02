@@ -3,6 +3,15 @@
  * ----------------------------------------------------------------------------
  */
  
+a:link,
+a:visited {
+	color: $link;
+}
+a:hover,
+a:focus {
+	color: $link-hover;
+}
+ 
  .home-heading {
 	color: $dark1;
 }
@@ -11,3 +20,27 @@
 	background: $dark1;
 	color: #fff;
 }
+
+@media #{$small-up} { }
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
+	.top-bar-section li.active:not(.has-form) a:not(.button) {
+		background: transparent;
+	}
+	.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+		background: #272727;
+	}
+}
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }

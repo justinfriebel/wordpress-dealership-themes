@@ -60,7 +60,13 @@
 .home-heading {
 	padding: 3rem 0.9375rem;
 }
-
+.home .featured-posts-container {
+	margin: 0 0 5rem 0;
+}
+.home h2 {
+	line-height: 2rem;
+	padding: 1rem 0;
+}
 
 
 /**
@@ -92,9 +98,6 @@
  * ------------------------------------
  */
 
-.home .featured-posts-container {
-	margin: 0;
-}
 
 /**
  * 3.6 Forms
@@ -124,6 +127,9 @@
 @media #{$medium-up} {
 	.contain-to-grid .top-bar {
 		padding: 0 0.9375rem;
+	}
+	.top-bar-section li.active:not(.has-form) a:not(.button) {
+		line-height: 112px;
 	}
 	.top-bar-section li:not(.has-form) a:not(.button) {
 		line-height: 112px;
