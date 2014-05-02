@@ -114,7 +114,11 @@
 
 // Responsive media queries
 
-@media #{$small-up} { }
+@media #{$small-up} {
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		text-transform: uppercase;
+	}
+}
 @media #{$small-only} {
 	#logo {
 		max-height: 2.6rem;
