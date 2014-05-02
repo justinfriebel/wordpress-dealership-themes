@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-	<h1 class="home-heading small-12 columns"><?php bloginfo('name'); ?></h1>
+	<h1 class="home-heading small-12 row"><?php bloginfo('name'); ?></h1>
+	
 	<div class="row">
 		<div class="small-12 large-8 columns" role="main">
 			<div class="featured-posts-container">
@@ -23,7 +24,7 @@
 	</div>
 	
 	<div class="recent-posts-container small-12 medium-12 large-12 row">
-	<h3>Recent posts</h3>
+	<h3 class="column">Recent posts</h3>
 	
 		<?php if ( have_posts() ) : ?>
 			
