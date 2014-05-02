@@ -4,6 +4,7 @@
 
 	<div class="small-12 large-8 columns" role="main">
 		<div class="featured-posts-container">
+			<h3>Featured post</h3>
 			<?php
 			
 				$featured_posts_query = new WP_Query('category_name=featured&posts_per_page=1');
@@ -17,7 +18,8 @@
 				
 			?>
 		</div>
-	
+		
+		<h3>Recent posts</h3>
 		<?php if ( have_posts() ) : ?>
 			
 			<?php do_action('foundationPress_before_content'); ?>

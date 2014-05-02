@@ -11,6 +11,17 @@ a:hover,
 a:focus {
 	color: $link-hover;
 }
+
+.button {
+	background-color: $btn;
+	border-color: #007295;
+	transition: background-color 300ms ease-out;
+}
+.button:hover {
+	background-color: $btn-hover;
+	border-color: #007295;
+	transition: background-color 300ms ease-out;
+}
  
  .home-heading {
 	color: $dark1;
