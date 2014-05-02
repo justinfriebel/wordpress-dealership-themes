@@ -10,6 +10,7 @@
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?php FoundationPress_entry_meta(); ?>
+				<p>Categories: <?php the_category(', '); ?></p>
 			</header>
 			<?php do_action('foundationPress_post_before_entry_content'); ?>
 			<div class="entry-content">
