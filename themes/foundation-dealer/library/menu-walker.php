@@ -17,7 +17,7 @@ class top_bar_walker extends Walker_Nav_Menu {
         $item_html = '';
         parent::start_el( $item_html, $object, $depth, $args ); 
         
-        $output .= ( $depth == 0 ) ? '<li class="divider"></li>' : '';
+        //$output .= ( $depth == 0 ) ? '<li class="divider"></li>' : '';
         
         $classes = empty( $object->classes ) ? array() : (array) $object->classes;  
         
