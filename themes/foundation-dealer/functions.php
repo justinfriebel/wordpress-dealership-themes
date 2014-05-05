@@ -29,4 +29,14 @@ require_once('library/enqueue-scripts.php');
 // Add theme support
 require_once('library/theme-support.php');
 
+// Add button class to read more excerpt links
+add_filter( 'the_content_more_link', 'add_morelink_classes' );
+function add_morelink_classes( $more_link_html ) {
+
+	$new_classes = array( 'button' );
+	$more_link_html = str_replace( 'class="more-link', 'class="' . implode( ' ', $new_classes ) . ' more-link', $more_link_html );
+
+	return $more_link_html;
+}
+
 ?>

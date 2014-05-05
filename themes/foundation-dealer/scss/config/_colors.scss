@@ -16,11 +16,15 @@ a:focus {
 	background-color: $btn;
 	border-color: #007295;
 	transition: background-color 300ms ease-out;
+	color: #fff;
 }
 .button:hover {
 	background-color: $btn-hover;
 	border-color: #007295;
 	transition: background-color 300ms ease-out;
+}
+a.button {
+	color: #fff;
 }
  
  .home-heading {
