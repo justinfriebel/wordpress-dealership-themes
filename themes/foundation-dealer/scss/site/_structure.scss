@@ -81,13 +81,15 @@ a.button {
  * ------------------------------------
  */
 
- .single-post-container {
+.single-post-container {
 	padding: 2rem 0 0 0;
 }
 .single-post-content {
 	float: left;
 }
-
+.single-post-content .entry-title {
+  line-height: 2.5rem;
+}
 
 /**
  * 3.3 Widgets
