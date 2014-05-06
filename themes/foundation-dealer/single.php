@@ -6,10 +6,12 @@
 	<?php do_action('foundationPress_before_content'); ?>
 	
 	<?php while (have_posts()) : the_post(); ?>
+		<?php // wpb_set_post_views(get_the_ID()); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?= entry_meta_2(); ?>
+				<?= wpb_get_post_views(get_the_ID()); ?>
 			</header>
 			<?php do_action('foundationPress_post_before_entry_content'); ?>
 			<div class="entry-content">
