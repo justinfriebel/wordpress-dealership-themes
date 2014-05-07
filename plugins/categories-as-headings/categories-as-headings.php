@@ -1,16 +1,16 @@
 <?php
 /*
 Plugin Name: Categories as headings
-Plugin URI: http://mysite.com
+Plugin URI: http://dealerfire.com
 Description: A category widget with headings instead of a list.
-Author: Me
+Author: Justin Friebel
 Version: 1.0
-Author URI: http://mysite.com
+Author URI: http://dealerfire.com
 */
 
 
 /**
- * Categories widget class
+ * Categories as headings widget class
  *
  * @since 2.8.0
  */
@@ -80,7 +80,8 @@ class categories_as_headings extends WP_Widget {
 
     $custom_cat_args = array(
       'orderby' => 'count',
-      'parent' => 0
+      'parent' => 0,
+      'number' => 5
       );
     $categories = get_categories( $custom_cat_args );
     foreach ( $categories as $category ) {

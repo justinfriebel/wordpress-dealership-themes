@@ -24,32 +24,50 @@
 	</div>
 	
 	<div class="recent-posts-container small-12 medium-12 large-12 row">
-	<h3 class="column">Recent posts</h3>
-	
-		<?php if ( have_posts() ) : ?>
-			
-			<?php do_action('foundationPress_before_content'); ?>
-			
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if ( !in_category('3') ): ?>
-				<div class="recent-single-post small-12 medium-4 large-4 columns">
-					<?php
+    <h3 class="column">Recent posts</h3>
+    <?php
+      $args = array( 'posts_per_page' => 3 );
+
+      $myposts = get_posts( $args );
+      foreach ( $myposts as $post ) : setup_postdata( $post );
+        if ( !in_category('7') ):
+    ?>
+        <div class="recent-single-post small-12 medium-4 large-4 columns">
+          <?php
 						echo '<a href="' . get_permalink($post->ID) . '" >';
 						the_post_thumbnail( 'large' );
 						echo '</a>';
 						get_template_part( 'content', get_post_format() );
 					?>
-				</div>
-				<?php endif; ?>
-			<?php endwhile; ?>
-			
-			<?php else : ?>
-				<?php get_template_part( 'content', 'none' ); ?>
-			
-			<?php do_action('foundationPress_before_pagination'); ?>
-			
-		<?php endif;?>
+        </div>
+        <?php
+        endif;
+      endforeach; 
+      wp_reset_postdata();
+    ?>
+	</div>
 
+  <div class="recent-posts-container small-12 medium-12 large-12 row">
+    <?php
+      $args = array( 'posts_per_page' => 3, 'offset'=> 3 );
+
+      $myposts = get_posts( $args );
+      foreach ( $myposts as $post ) : setup_postdata( $post );
+        if ( !in_category('7') ):
+    ?>
+        <div class="recent-single-post small-12 medium-4 large-4 columns">
+          <?php
+						echo '<a href="' . get_permalink($post->ID) . '" >';
+						the_post_thumbnail( 'large' );
+						echo '</a>';
+						get_template_part( 'content', get_post_format() );
+					?>
+        </div>
+        <?php
+        endif;
+      endforeach; 
+      wp_reset_postdata();
+    ?>
 	</div>
 	
 	
