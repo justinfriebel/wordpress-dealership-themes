@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Dealership categories as headings
+Plugin Name: Categories as headings
 Plugin URI: http://mysite.com
 Description: A category widget with headings instead of a list.
 Author: Me
@@ -9,29 +9,16 @@ Author URI: http://mysite.com
 */
 
 
-function widget_my_categories() 
-{
-    wp_list_categories('exclude=1');
-}
-
-function my_categories_init()
-{
-  register_sidebar_widget(__('Custom Categories Widget'), 'widget_my_categories');
-}
-
-add_action("plugins_loaded", "my_categories_init");
-
-
 /**
  * Categories widget class
  *
  * @since 2.8.0
  */
-class Dealership_Widget_Categories extends WP_Widget {
+class categories_as_headings extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array( 'classname' => 'widget_categories', 'description' => __( "A list or dropdown of categories." ) );
-		parent::__construct('categories', __('Categories'), $widget_ops);
+		$widget_ops = array( 'classname' => 'widget_categories_as_headings', 'description' => __( "Categories as headings" ) );
+		parent::__construct('categories_as_headings', __('Categories as headings.'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {
@@ -133,4 +120,11 @@ class Dealership_Widget_Categories extends WP_Widget {
 	}
 
 }
+
+// Register and load the widget
+function cah_load_widget() {
+  register_widget( 'categories_as_headings' );
+}
+add_action( 'widgets_init', 'cah_load_widget' );
+
 ?>
