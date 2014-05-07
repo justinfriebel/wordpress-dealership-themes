@@ -40,7 +40,7 @@
 						get_template_part( 'content', get_post_format() );
 					?>
         </div>
-        <?php
+    <?php
         endif;
       endforeach; 
       wp_reset_postdata();
@@ -63,7 +63,7 @@
 						get_template_part( 'content', get_post_format() );
 					?>
         </div>
-        <?php
+    <?php
         endif;
       endforeach; 
       wp_reset_postdata();
