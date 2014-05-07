@@ -30,12 +30,13 @@ class categories_as_headings extends WP_Widget {
 		$c = ! empty( $instance['count'] ) ? '1' : '0';
 		$h = ! empty( $instance['hierarchical'] ) ? '1' : '0';
 		$d = ! empty( $instance['dropdown'] ) ? '1' : '0';
+    $s = ! empty( $instance['style'] ) ? 'list' : 'none';
 
 		echo $before_widget;
 		if ( $title )
 			echo $before_title . $title . $after_title;
 
-		$cat_args = array('orderby' => 'name', 'show_count' => $c, 'hierarchical' => $h);
+		$cat_args = array('orderby' => 'name', 'show_count' => $c, 'hierarchical' => $h, 'style' => $s);
 
 		if ( $d ) {
 			$cat_args['show_option_none'] = __('Select Category');
@@ -67,7 +68,7 @@ class categories_as_headings extends WP_Widget {
 <?php
 		} else {
 ?>
-		<ul>
+
 <?php
 		$cat_args['title_li'] = '';
 
@@ -78,9 +79,18 @@ class categories_as_headings extends WP_Widget {
 		 *
 		 * @param array $cat_args An array of Categories widget options.
 		 */
-		wp_list_categories( apply_filters( 'widget_categories_args', $cat_args ) );
+
+    $custom_cat_args = array(
+      'orderby' => 'count',
+      'parent' => 0
+      );
+    $categories = get_categories( $custom_cat_args );
+    foreach ( $categories as $category ) {
+      echo '<h6><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a></h6>';
+    }
+      
 ?>
-		</ul>
+
 <?php
 		}
 
