@@ -2,7 +2,7 @@
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.6
-Stable tag: 3.2.2
+Stable tag: 3.2.4.1
 Tested up to: 3.8.1
 License: GPLv2
 
@@ -20,7 +20,7 @@ The theme also includes the ability for visitors to switch between the theme on 
 
 With 4 themes and 3 new extensions installed & updated right from our new BraveNewCloud service, it's the best WPtouch yet!
 
-For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewcode.com/wptouch/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch Pro 3 Product Page").
+For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch.com").
 
 'WPtouch' & ’WPtouch Pro' are trademarks of BraveNewCode Inc.
 
@@ -39,6 +39,20 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 11. WPtouch admin - Menu Setup
 
 == Changelog ==
+
+= Version 3.2.4.1 (May 6th, 2014) =
+
+* Updated: HTML output
+* Updated: Language files
+
+= Version 3.2.4 (April 23nd, 2014) =
+
+* Added: Support for Windows Phone 8.1
+* Updated: product links from bravenewcode.com to wptouch.com
+
+= Version 3.2.3 (April 20nd, 2014) =
+
+* Intentionally skipped
 
 = Version 3.2.2 (April 9th, 2014) =
 
