@@ -1,10 +1,6 @@
 # WordPress dealership themes
 
-This is a WordPress starter theme based on Foundation 5 by Zurb. The purpose of FoundationPress, is to act as a small and handy toolbox that contains the essentials needed to build any design. FoundationPress is meant to be a starting point, not the final product. If you're looking for an all-in-one theme with built-in shortcodes, plugins, fancypancy portfolio templates or whatnot, I'm afraid you have to look elsewhere.
-
-Please fork, copy, modify, delete, share or do whatever you like with this. 
-
-All contributions are welcome!
+This is a group of WordPress dealership themes. foundation-dealer is the first theme and it is based on FoundationPress: https://github.com/olefredrik/foundationpress.
 
 ## Requirements
 
@@ -17,11 +13,10 @@ All contributions are welcome!
 ## Quickstart
 
 ```bash
-cd my-wordpress-folder/wp-content/themes/
-git clone git@github.com:olefredrik/FoundationPress.git
-mv FoundationPress your-theme-name
-cd your-theme-name
-npm install && bower install
+cd my-wordpress-folder/
+git clone git@github.com:justinfriebel/wordpress-dealership-themes.git
+npm install
+bower install
 ```
 
 While you're working on your project, run:
@@ -29,10 +24,6 @@ While you're working on your project, run:
 `grunt`
 
 And you're set!
-
-Check for Foundation Updates? Run:
-`foundation update` 
-(this requires the foundation gem to be installed in order to work. Please see the [docs](http://foundation.zurb.com/docs/sass.html) for details.)
 
 
 ## Stylesheet Folder Structure
@@ -58,12 +49,3 @@ Check for Foundation Updates? Run:
 ## How to get started with Foundation
 
 * [Zurb Foundation Docs](http://foundation.zurb.com/docs/)
-
-## Learn how to use WordPress
-
-* [WordPress Codex](http://codex.wordpress.org/)
-
-## Demo
-
-* [Clean FoundationPress install](http://foundationpress.olefredrik.com/)
-* [FoundationPress Kitchen Sink - see every single element in action](http://foundationpress.olefredrik.com/kitchen-sink/)
