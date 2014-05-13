@@ -14,24 +14,33 @@ a:focus {
 
 .button {
 	background-color: $btn;
-	border-color: #007295;
+	border-color: $btn-border;
 	transition: background-color 300ms ease-out;
 	color: #fff;
 }
 .button:hover {
 	background-color: $btn-hover;
-	border-color: #007295;
+	border-color: $btn-border;
 	transition: background-color 300ms ease-out;
 }
 a.button {
 	color: #fff;
 }
 
+.contain-to-grid {
+  background: $header-bg;
+}
 .top-bar {
   background: transparent;
 }
 .top-bar-section ul {
   background: transparent;
+}
+.top-bar-section ul li>a {
+  color: $menu-color;
+}
+.top-bar-section ul li:hover:not(.has-form)>a {
+  color: $menu-color;
 }
 .top-bar-section li:not(.has-form) a:not(.button) {
   background: transparent;
@@ -42,7 +51,7 @@ a.button {
 }
  
 #footer {
-	background: $dark1;
+	background: $footer-bg;
 	color: #fff;
 }
 
@@ -54,9 +63,13 @@ a.button {
 @media #{$medium-up} {
 	.top-bar-section li.active:not(.has-form) a:not(.button) {
 		background: transparent;
+    color: $menu-color;
 	}
+  .top-bar-section li:not(.has-form) a:not(.button):hover {
+    background: $menu-hover;
+  }
 	.top-bar-section li.active:not(.has-form) a:not(.button):hover {
-		background: #272727;
+		background: $menu-hover;
 	}
 }
 @media #{$medium-only} { }
