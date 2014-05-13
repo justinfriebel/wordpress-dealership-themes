@@ -79,7 +79,13 @@ input[type="submit"] {
 	padding: 1rem 0;
 }
 .recent-posts-container.row {
-  margin: 4rem -0.9375rem;
+  margin: 0 -0.9375rem;
+}
+.recent-posts-container.rpc-top {
+  margin-top: 4rem;
+}
+.recent-single-post {
+  margin: 0 0 4rem 0;
 }
 
 
@@ -108,10 +114,14 @@ input[type="submit"] {
  * 3.3 Widgets
  * ------------------------------------
  */
-
-#sidebar.columns {
-  padding-left: 3rem;
-  padding-right: 0;
+#sidebar article {
+  margin-top: 2rem;
+}
+@media #{$large-up} {
+  #sidebar.columns {
+    padding-left: 3rem;
+    padding-right: 0;
+  }
 }
 
 

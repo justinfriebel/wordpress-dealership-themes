@@ -26,12 +26,22 @@ a:focus {
 a.button {
 	color: #fff;
 }
- 
- .home-heading {
+
+.top-bar {
+  background: transparent;
+}
+.top-bar-section ul {
+  background: transparent;
+}
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: transparent;
+}
+
+.home-heading {
 	color: $dark1;
 }
  
- #footer {
+#footer {
 	background: $dark1;
 	color: #fff;
 }

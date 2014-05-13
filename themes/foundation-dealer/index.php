@@ -23,7 +23,7 @@
 		<?php get_sidebar(); ?>
 	</div>
 	
-	<div class="recent-posts-container small-12 medium-12 large-12 row">
+	<div class="recent-posts-container rpc-top small-12 medium-12 large-12 row">
     <h3 class="column">Recent posts</h3>
     <?php
       $args = array( 'posts_per_page' => 3 );
