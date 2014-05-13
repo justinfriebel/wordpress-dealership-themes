@@ -10,6 +10,11 @@
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?= entry_meta_2(); ?>
+        <?php
+          echo '<a href="' . get_permalink($post->ID) . '" >';
+          the_post_thumbnail( 'large' );
+          echo '</a>';
+        ?>
 			</header>
 			<?php do_action('foundationPress_post_before_entry_content'); ?>
 			<div class="entry-content">
