@@ -142,6 +142,10 @@ input[type="submit"] {
  * ----------------------------------------------------------------------------
  */
 
+#wp_rp_first {
+  margin-top: 2rem;
+}
+
 // Responsive media queries
 
 @media #{$small-up} {
