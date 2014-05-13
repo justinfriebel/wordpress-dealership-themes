@@ -109,8 +109,9 @@ input[type="submit"] {
  * ------------------------------------
  */
 
-#sidebar article.row {
-  margin-top: 1rem;
+#sidebar.columns {
+  padding-left: 3rem;
+  padding-right: 0;
 }
 
 
