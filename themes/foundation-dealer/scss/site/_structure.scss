@@ -66,9 +66,17 @@ input[type="submit"] {
  * 3.1 Pages
  * ------------------------------------
  */
-
+@media #{$small-only} {
+  .hero {
+    padding: 2rem 0;
+  }
+}
+@media #{$medium-up} {
+	.hero {
+    padding: 4rem 5rem;
+  }
+}
 .home-heading {
-	padding: 3rem 0.9375rem 1rem 0.9375rem;
   font-weight: 700;
 }
 .home .featured-posts-container {
