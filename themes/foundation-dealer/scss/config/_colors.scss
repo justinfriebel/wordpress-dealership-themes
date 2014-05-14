@@ -46,6 +46,22 @@ a.button {
   background: transparent;
 }
 
+.tab-bar {
+  background: $header-bg;
+}
+.tab-bar .menu-icon span {
+  box-shadow: 0 0px 0 1px $menu-color,0 7px 0 1px $menu-color,0 14px 0 1px $menu-color;
+}
+.tab-bar .menu-icon:hover span {
+  box-shadow: 0 0px 0 1px $menu-color,0 7px 0 1px $menu-color,0 14px 0 1px $menu-color;
+}
+.left-small {
+  border-right: solid 1px $mobile-divider;
+}
+.left-off-canvas-menu {
+  background: $header-bg;
+}
+
 .home-heading {
 	color: $dark1;
 }
