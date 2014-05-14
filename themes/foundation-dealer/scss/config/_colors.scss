@@ -2,7 +2,12 @@
  * Custom color scheme
  * ----------------------------------------------------------------------------
  */
- 
+
+body {
+  background: $body-bg;
+  color: $body-text;
+}
+
 a:link,
 a:visited {
 	color: $link;
@@ -16,7 +21,7 @@ a:focus {
 	background-color: $btn;
 	border-color: $btn-border;
 	transition: background-color 300ms ease-out;
-	color: #fff;
+	color: $btn-color;
 }
 .button:hover {
 	background-color: $btn-hover;
@@ -24,7 +29,7 @@ a:focus {
 	transition: background-color 300ms ease-out;
 }
 a.button {
-	color: #fff;
+	color: $btn-color;
 }
 
 .contain-to-grid {
@@ -58,17 +63,32 @@ a.button {
 .left-small {
   border-right: solid 1px $mobile-divider;
 }
+
 .left-off-canvas-menu {
   background: $header-bg;
 }
+ul.off-canvas-list li a {
+  color: $menu-color;
+}
+ul.off-canvas-list li a:hover {
+  background: $menu-hover;
+}
 
 .home-heading {
-	color: $dark1;
+	color: $home-heading;
 }
- 
+
+.single-post-content .entry-title {
+  color: $single-post-heading;
+}
+
+label {
+  color: $body-text;
+}
+
 #footer {
 	background: $footer-bg;
-	color: #fff;
+	color: $footer-color;
 }
 
 @media #{$small-up} { }
