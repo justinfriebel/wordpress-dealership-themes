@@ -96,6 +96,9 @@ input[type="submit"] {
   margin: 0 0 4rem 0;
 }
 
+.page-template-categories-php .entry-title {
+  margin-bottom: 2rem;
+}
 
 /**
  * 3.2 Posts
@@ -116,6 +119,15 @@ input[type="submit"] {
 }
 .single-post-content header img {
   margin-bottom: 1rem;
+}
+
+.search article,
+.archive article {
+  margin-bottom: 4rem;
+}
+.search h2,
+.archive h2 {
+  line-height: 2rem;
 }
 
 /**
