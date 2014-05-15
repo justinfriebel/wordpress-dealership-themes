@@ -103,6 +103,10 @@ input[type="submit"] {
   margin-bottom: 2rem;
 }
 
+.page div[role=main] {
+  float: left;
+}
+
 /**
  * 3.2 Posts
  * ------------------------------------
@@ -142,6 +146,7 @@ input[type="submit"] {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
 }
+.page #sidebar,
 .single #sidebar {
   padding-left: 0;
   padding-right: 0;
@@ -154,6 +159,11 @@ input[type="submit"] {
     padding-left: 3rem;
     padding-right: 0;
     float: left;
+  }
+  .page #sidebar,
+  .single #sidebar {
+    padding-left: 3rem;
+    padding-right: 0;
   }
 }
 
