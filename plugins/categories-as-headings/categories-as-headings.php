@@ -90,6 +90,8 @@ class categories_as_headings extends WP_Widget {
       
 ?>
 
+<a href="<?php echo home_url(); ?>/popular-categories">View all</a>
+
 <?php
 		}
 
