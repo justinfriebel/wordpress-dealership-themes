@@ -43,7 +43,7 @@
 	padding: 1rem 0;
 }
 #footer {
-	padding: 2rem;
+	padding: 2rem 0;
 }
 #footer p {
 	margin-bottom: 0;
@@ -137,13 +137,23 @@ input[type="submit"] {
  * 3.3 Widgets
  * ------------------------------------
  */
+#sidebar {
+  float: left;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+.single #sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
 #sidebar article {
   margin-top: 2rem;
 }
 @media #{$large-up} {
-  #sidebar.columns {
+  #sidebar {
     padding-left: 3rem;
     padding-right: 0;
+    float: left;
   }
 }
 

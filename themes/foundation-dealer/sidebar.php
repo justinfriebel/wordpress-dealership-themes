@@ -1,4 +1,4 @@
-<aside id="sidebar" class="small-12 large-4 columns">
+<aside id="sidebar" class="small-12 large-4">
 	<?php do_action('foundationPress_before_sidebar'); ?>
 		
 		<article class="popular-posts-container row widget widget_categories">
