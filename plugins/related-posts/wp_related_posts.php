@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Related Posts
-Version: 3.4.7
+Version: 3.4.8
 Plugin URI: http://wordpress.org/extend/plugins/related-posts/
 Description: Link to related content to help your readers. Get attention from other authors. Make great outbound links for SEO. With just a few clicks.
 Author: Zemanta

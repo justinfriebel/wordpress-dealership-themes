@@ -9,7 +9,7 @@ function wp_rp_add_image_sizes() {
 
 	add_image_size(WP_RP_THUMBNAILS_NAME, WP_RP_THUMBNAILS_WIDTH, WP_RP_THUMBNAILS_HEIGHT, true);
 	if ($platform_options['theme_name'] == 'pinterest.css') {
-		add_image_size(WP_RP_THUMBNAILS_NAME_PROP, WP_RP_THUMBNAILS_WIDTH, 0, false);
+		add_image_size(WP_RP_THUMBNAILS_PROP_NAME, WP_RP_THUMBNAILS_WIDTH, 0, false);
 	}
 	if ($platform_options['custom_size_thumbnail_enabled']) {
 		add_image_size(WP_RP_THUMBNAILS_NAME, $platform_options['custom_thumbnail_width'], $platform_options['custom_thumbnail_height'], true);
@@ -37,13 +37,11 @@ function wp_rp_upload_default_thumbnail_file() {
 
 		$img_width = $platform_options['custom_size_thumbnail_enabled'] ? $platform_options['custom_thumbnail_width'] :  WP_RP_THUMBNAILS_WIDTH;
 		$img_height = $platform_options['custom_size_thumbnail_enabled'] ? $platform_options['custom_thumbnail_height'] : WP_RP_THUMBNAILS_HEIGHT;
-
 		if ($image = wp_rp_get_image_with_exact_size($image_data, array($img_width, $img_height))) {
 			$upload_dir = wp_upload_dir();
 			return $upload_dir['url'] . '/' . $image['file'];
 		}
 	}
-
 	return new WP_Error('upload_error');
 }
 
@@ -262,26 +260,28 @@ function wp_rp_get_image_with_exact_size($image_data, $size) {
 
 	$img_url = wp_get_attachment_url($image_data['id']);
 	$img_url_basename = wp_basename($img_url);
+	$platform_options = wp_rp_get_platform_options();
 
 	// Calculate exact dimensions for proportional images
 	if (!$size[0]) { $size[0] = (int) ($image_data['data']['width'] / $image_data['data']['height'] * $size[1]); }
 	if (!$size[1]) { $size[1] = (int) ($image_data['data']['height'] / $image_data['data']['width'] * $size[0]); }
 
-	if (!$image_data['data']['sizes']) {
-		$w = $image_data['data']['width'];
-		$h = $image_data['data']['height'];
-		if ($w == WP_RP_THUMBNAILS_WIDTH && $h == WP_RP_THUMBNAILS_HEIGHT) {
-			$file = explode("/", $image_data['data']['file']);
-			$file = $file[count($file) - 1];
-			$img_url = str_replace($img_url_basename, wp_basename($file), $img_url);
-			return array(
-				'url' => $img_url,
-				'file' => $file,
-				'width' => $w,
-				'height' => $h
-			);
-
-		}
+	$w = $image_data['data']['width'];
+	$h = $image_data['data']['height'];
+	$thumb_width = $platform_options['custom_size_thumbnail_enabled'] ? $platform_options['custom_thumbnail_width'] : WP_RP_THUMBNAILS_WIDTH;
+	$thumb_height = $platform_options['custom_size_thumbnail_enabled'] ? $platform_options['custom_thumbnail_height'] : WP_RP_THUMBNAILS_HEIGHT;
+	$default_sizes = $w == $thumb_width && $h == $thumb_height;
+	$matches_sizes = $w == $size[0] && $h == $size[1];
+	if (!$image_data['data']['sizes'] && $default_sizes || $matches_sizes) {		
+		$file = explode("/", $image_data['data']['file']);
+		$file = $file[count($file) - 1];
+		$img_url = str_replace($img_url_basename, wp_basename($file), $img_url);
+		return array(
+			'url' => $img_url,
+			'file' => $file,
+			'width' => $w,
+			'height' => $h
+		);
 	}
 	foreach ($image_data['data']['sizes'] as $_size => $data) {
 		// width and height can be both string and integers. WordPress..

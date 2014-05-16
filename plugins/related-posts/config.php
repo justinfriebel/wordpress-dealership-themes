@@ -26,7 +26,7 @@ define('WP_RP_THUMBNAILS_DEFAULTS_COUNT', 31);
 
 define("WP_RP_MAX_LABEL_LENGTH", 32);
 
-define("WP_RP_CTR_DASHBOARD_URL", "http://d.zemanta.com/");
+define("WP_RP_CTR_DASHBOARD_URL", "https://d.zemanta.com/");
 define("WP_RP_STATIC_CTR_PAGEVIEW_FILE", "js/pageview.js");
 
 define("WP_RP_STATIC_RECOMMENDATIONS_JS_FILE", "js/recommendations.js");
@@ -45,6 +45,8 @@ define("WP_RP_RECOMMENDATIONS_CATEGORIES_SCORE", 5);
 define("WP_RP_RECOMMENDATIONS_NUM_PREGENERATED_POSTS", 50);
 
 define("WP_RP_THUMBNAILS_NUM_PREGENERATED_POSTS", 50);
+
+define("WP_RP_EXCERPT_SHORTENED_SYMBOL", " [&hellip;]");
 
 global $wp_rp_options, $wp_rp_meta, $wp_rp_global_notice_pages;
 $wp_rp_options = false;
@@ -259,6 +261,18 @@ function wp_rp_is_classic() {
 		return true;
 	}
 	return false;
+}
+
+function wp_rp_migrate_3_4_7() {
+	$wp_rp_meta = get_option('gp_meta');
+	$wp_rp_meta['version'] = '3.4.8';
+	$wp_rp_meta['new_user'] = false;
+	update_option('gp_meta', $wp_rp_meta);
+	
+	$wp_rp_options = get_option('gp_options');
+	$wp_rp_options['max_related_post_age_in_days'] = 0;
+	update_option('gp_options', $wp_rp_options);
+	
 }
 
 function wp_rp_migrate_3_4_6() {

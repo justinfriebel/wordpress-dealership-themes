@@ -203,6 +203,8 @@ function wp_rp_handle_postdata() {
 		'display_zemanta_linky' => $meta['show_zemanta_linky_option'] ? isset($postdata['wp_rp_display_zemanta_linky']) : true,
 
 		'only_admins_can_edit_related_posts' => !empty($postdata['wp_rp_only_admins_can_edit_related_posts']),
+
+		'max_related_post_age_in_days' => 0,
             
 		'mobile' => array(
 			'display_comment_count' => isset($postdata['wp_rp_mobile_display_comment_count']),
