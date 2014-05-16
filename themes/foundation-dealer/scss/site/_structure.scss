@@ -154,6 +154,9 @@ input[type="submit"] {
 #sidebar article {
   margin-top: 2rem;
 }
+#searchsubmit {
+  margin-left: 0.5rem;
+}
 @media #{$large-up} {
   #sidebar {
     padding-left: 3rem;
