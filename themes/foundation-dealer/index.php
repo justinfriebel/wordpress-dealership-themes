@@ -1,9 +1,4 @@
 <?php get_header(); ?>
-
-	<div class="hero">
-    <h1 class="home-heading small-12 row text-center"><?php bloginfo('name'); ?></h1>
-    <p class="text-center">Robbins Chevrolet has not become the longest operating Chevrolet dealer in the Houston area all on our own. Our family would like to thank every customer that has trusted us over the last 86 years to complete every job quickly, accurately, and fairly.</p>
-  </div>
 	
 	<div class="row">
 		<div class="small-12 large-8 columns" role="main">

@@ -69,6 +69,10 @@ input[type="submit"] {
  * 3.1 Pages
  * ------------------------------------
  */
+.hero {
+  background: url("../images/dealership-home-bg.jpg") no-repeat center;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
 @media #{$small-only} {
   .hero {
     padding: 2rem 0;
@@ -76,12 +80,18 @@ input[type="submit"] {
 }
 @media #{$medium-up} {
 	.hero {
-    padding: 4rem 5rem;
+    padding: 4rem 0;
+    min-height: 400px;
+  }
+  .hero .hero-text-container {
+    max-width: 400px;
   }
 }
 .home-heading {
   font-weight: 700;
+  line-height: 1;
 }
+
 .home .featured-posts-container {
 	margin: 0;
 }
@@ -116,7 +126,7 @@ input[type="submit"] {
 	padding: 2rem 0 0 0;
 }
 .home .container {
-  padding: 0;
+  padding: 3rem 0;
 }
 .single-post-content {
 	float: left;
@@ -166,6 +176,9 @@ input[type="submit"] {
     padding-right: 0;
     float: left;
   }
+  #sidebar article:first-child {
+    margin-top: 0;
+  }
   .page #sidebar,
   .single #sidebar {
     padding-left: 3rem;
@@ -205,7 +218,9 @@ input[type="submit"] {
   margin-top: 2rem;
 }
 
-// Responsive media queries
+
+
+// Responsive media queries //
 
 @media #{$small-up} {
 	.top-bar-section li:not(.has-form) a:not(.button) {
@@ -239,9 +254,6 @@ input[type="submit"] {
 	}
   .container {
 	 padding: 4rem 0 0 0;
-  }
-  .home .container {
-    padding: 0;
   }
 }
 @media #{$medium-only} { }
