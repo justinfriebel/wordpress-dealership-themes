@@ -69,8 +69,12 @@
     ?>
 	</div>
 	
-	<a href="<?php bloginfo('url'); ?>/posts/" class="button">View all posts</a>
-	
+  <div class="row">
+    <div class="small-3 large-centered columns">
+      <a href="<?php bloginfo('url'); ?>/posts/" class="button">View all posts</a>
+    </div>
+	</div>
+
 	<?php do_action('foundationPress_after_content'); ?>
 		
 <?php get_footer(); ?>

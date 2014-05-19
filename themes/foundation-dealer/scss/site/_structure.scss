@@ -108,8 +108,16 @@ input[type="submit"] {
 .recent-single-post {
   margin: 0 0 4rem 0;
 }
+.all-posts {
+  width: 30%;
+}
 
+.page-template-all-posts-php .entry-title,
 .page-template-categories-php .entry-title {
+  margin-bottom: 2rem;
+}
+.page-template-all-posts-php h2 {
+  line-height: 1;
   margin-bottom: 2rem;
 }
 
