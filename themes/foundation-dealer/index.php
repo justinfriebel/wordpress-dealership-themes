@@ -47,7 +47,8 @@
 
   <div class="recent-posts-container small-12 medium-12 large-12 row">
     <?php
-      $args = array( 'posts_per_page' => 3, 'offset'=> 3 );
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+      $args = array( 'posts_per_page' => 3, 'offset' => 3, 'paged' => $paged );
 
       $myposts = get_posts( $args );
       foreach ( $myposts as $post ) : setup_postdata( $post );
@@ -68,14 +69,7 @@
     ?>
 	</div>
 	
-	
-	
-	<?php if ( function_exists('FoundationPress_pagination') ) { FoundationPress_pagination(); } else if ( is_paged() ) { ?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'FoundationPress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'FoundationPress' ) ); ?></div>
-		</nav>
-	<?php } ?>
+	<a href="<?php bloginfo('url'); ?>/posts/" class="button">View all posts</a>
 	
 	<?php do_action('foundationPress_after_content'); ?>
 		
